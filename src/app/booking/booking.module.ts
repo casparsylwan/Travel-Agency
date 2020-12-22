@@ -7,6 +7,7 @@ import { OrderContainerComponent } from './order-container/order-container.compo
 import { DestinationComponent } from './destination/destination.component';
 import { SeatsComponent } from './seats/seats.component';
 import { PaymentComponent } from './payment/payment.component';
+import { SeatComponent } from './seat/seat.component';
 
 console.log("3. bookingmodule");
 
@@ -30,7 +31,7 @@ const routes = [
 
 
 @NgModule({
-  declarations: [OrderCompletationComponent, OrderContainerComponent, DestinationComponent, SeatsComponent, PaymentComponent],
+  declarations: [OrderCompletationComponent, OrderContainerComponent, DestinationComponent, SeatsComponent, PaymentComponent, SeatComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)

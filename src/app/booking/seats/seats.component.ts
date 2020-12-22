@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Seat } from 'src/models/seat';
+import { Chair } from 'src/models/seat';
 
 @Component({
   selector: 'app-seats',
@@ -8,10 +8,10 @@ import { Seat } from 'src/models/seat';
 })
 export class SeatsComponent implements OnInit {
 
-  seats:Seat[] = [];
-  windowLeft:Seat[];
-  aisle:Seat[];
-  windowRight:Seat[];
+  chairs:Chair[] = [];
+  windowLeft:Chair[];
+  aisle:Chair[];
+  windowRight:Chair[];
 
   constructor() { }
 
@@ -31,26 +31,26 @@ export class SeatsComponent implements OnInit {
   {
     for(let i=0; i<planeSize; i++)
     {
-      let seat:Seat = new Seat(i, i%7);
-      this.seats.push(seat)
+      let chair:Chair = new Chair(i, i%7);
+      this.chairs.push(chair)
       
     }
   }
 
   rowSorter()
   {
-      this.windowLeft = this.seats.filter(
+      this.windowLeft = this.chairs.filter(
         seat => seat.seatPlacment === 0 || 
                 seat.seatPlacment === 1                        
         );
 
-      this.aisle = this.seats.filter(
+      this.aisle = this.chairs.filter(
         seat => seat.seatPlacment === 2 || 
                 seat.seatPlacment === 3 ||
                 seat.seatPlacment === 4
       )
 
-      this.windowRight = this.seats.filter(
+      this.windowRight = this.chairs.filter(
         seat => seat.seatPlacment === 5 || 
                 seat.seatPlacment === 6
       )

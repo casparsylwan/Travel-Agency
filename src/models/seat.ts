@@ -1,4 +1,4 @@
-export class Seat {
+export class Chair {
     seatNumber:number;
     seatPlacment:number;
     
